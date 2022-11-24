@@ -4,7 +4,7 @@ import json
 
 url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
 parameters = {
-    'start': '97',
+    'start': '20',
     'limit': '1',
 
 
@@ -23,5 +23,6 @@ try:
     json_string = json.dumps(data['data'])
 
     print(json_string)
+    print("hello")
 except (ConnectionError, Timeout, TooManyRedirects) as e:
     print(e)
