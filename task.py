@@ -1,10 +1,17 @@
 from requests import Request, Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import json
+from dotenv import load_dotenv
+import os
+load_dotenv()
+# environement variables
+API_Key = os.getenv("API_KEY")
+EMAIL_ADDR = ""
+PASSWORD = ""
 
 url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
 parameters = {
-    'start': '20',
+    'start': '99',
     'limit': '1',
 
 
